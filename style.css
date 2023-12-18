@@ -1,0 +1,86 @@
+/* Resetting default margin and padding */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the header with background GIF and black tint */
+header {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    z-index: 1;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fish-esp.gif'); /* Use the file name if it's in the same directory */
+    background-size: cover;
+    filter: brightness(40%) grayscale(50%); /* Tint the GIF with black */
+    z-index: -1;
+    transition: background-size 0.5s ease-out;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* Allows mouse events to pass through the overlay */
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    /* Very visible drop shadow */
+    text-shadow: -5px 5px 6px rgba(0, 0, 0, 1); /* Adjust shadow strength as needed */
+}
+
+.content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-shadow: -5px 5px 6px rgba(0, 0, 0, 1);
+}
+
+.content p {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+.iframe {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 30%;
+    height: 75%;
+}
+
+/* Default link styling */
+a {
+    color: lime; /* Change link color to blue */
+    text-decoration: none; /* Remove underline by default */
+}
+
+/* Visited link styling */
+a:visited {
+    color: purple; /* Change visited link color to purple */
+}
+
+/* Hover effect on links */
+a:hover {
+    color: green; /* Change link color to red on hover */
+}
